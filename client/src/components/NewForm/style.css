@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    width: 80vw;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+#submit {
+    background-color: rgb(95, 173, 218);
+    color: white;
+    font-family: 'Raleway';
+    padding: 12px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+#story {
+    width: 400px;
+    height: 50px;
+}

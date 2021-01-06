@@ -1,0 +1,28 @@
+.navBar{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBtns{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns{
+    background: rgb(118, 120, 223);
+    color: black;
+    margin-top: 10px;
+    vertical-align: center;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: 'Redressed', sans-serif;
+    font-size: 40px;
+}

@@ -18,15 +18,15 @@ class Posts extends React.Component{
     render() {
         const renderPosts = this.state.allposts.map(post => (
             <div key={post.id} id="list-items">
-                <p>Title: {post.title}</p>
-                <p>Name: {post.name}</p>
-                <p>Story: {post.story}</p>
+                <p><b>Title:</b> {post.title}</p>
+                <p><b>Name:</b> {post.name}</p>
+                <p><b>Story:</b> {post.story}</p>
             </div>
         ))
 
         return (
-                <div>
-                    <h2>Your posts are here</h2>
+                <div id="content">
+                    <h2>A collection of your stories</h2>
                      { renderPosts }
                 </div>
         );

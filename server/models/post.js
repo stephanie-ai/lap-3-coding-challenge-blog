@@ -49,6 +49,17 @@ class Post {
             }
         })
     }
+
+    destroy(){
+        return new Promise(async (resolve, reject) => {
+            try{
+                await db.run(SQL`DELETE FROM postdb WHERE id= ${this.id};`);
+                resolve('Post was deleted')
+            } catch(err) {
+                reject('Post could not be deleted');
+            }
+        })
+    }
 }
 
 module.exports = Post;

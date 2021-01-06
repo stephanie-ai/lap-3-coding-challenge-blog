@@ -17,6 +17,7 @@ Make an anonymous post, tell others about your day or any experience.
 - View all previous entries in the database.
 - Search for specific entry based on id.
 - Navigation between the form and posts page.
+- EXTRA: delete button allows users to delete stories.
 
 
 ## Wins and Challenges

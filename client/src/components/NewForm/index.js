@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css';
 
 class NewForm extends Component{
 
@@ -36,18 +37,26 @@ class NewForm extends Component{
 
     render() {
         return (
+            <div id="content">
              <form onSubmit={this.handleSubmit}>
-                <label for="title">Title</label>
-                <input type="text" name="title" value={this.state.title} onChange={this.handleChange} id="title" />
+                <div className="formInput">
+                    <label htmlFor="title">Title  </label>
+                    <input type="text" name="title"  value={this.state.title} onChange={this.handleChange} id="title" />
+                </div><br></br>
+                
+                <div className="formInput">
+                    <label htmlFor="name">Your name  </label>
+                    <input type="text" name="name" id="name" className="formInput" value={this.state.name} onChange={this.handleChange} />
+                </div><br></br>
+                
+                <div className="formInput">
+                    <label htmlFor="story">Your story...  </label>
+                    <input type="text" name="story" id="story" className="formInput" value={this.state.story} onChange={this.handleChange} />
 
-                <label for="name">Your name</label>
-                <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange} />
-
-                <label for="story">Your story...</label>
-                <input type="text" name="story" id="story" value={this.state.story} onChange={this.handleChange} />
-
-                <input type="submit" disabled={this.checkFormInputs()} id="submit" value="Publish" />
+                    <input type="submit" disabled={this.checkFormInputs()} id="submit" value="Publish" />
+                </div>
              </form>
+            </div>
         );
     }
 }

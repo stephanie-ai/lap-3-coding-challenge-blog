@@ -6,7 +6,7 @@ class NewForm extends Component{
     state = {
         title: "",
         name: "",
-        story: ""
+        story: "",
     };
 
     handleChange = e => this.setState({[e.target.name]: e.target.value});
@@ -26,11 +26,22 @@ class NewForm extends Component{
             headers: { "Content-Type": "application/json" }
         };
 
+        // fetch('http://localhost:3000/posts', options)
+        //     .then(r => r.json())
+        //     .then(this.props.history.push('/posts'))
+        //     .catch(console.warn)
+
+        // this.props.history.push('/posts');
+        
         fetch('http://localhost:3000/posts', options)
             .then(r => r.json())
-            .catch(console.warn)
-
-        this.props.history.push('/posts');
+            .then(resp => {
+                console.log(resp)
+                const {id, err} = resp
+                if(err) { throw Error(err) }
+                else if(id) {this.props.history.push('/posts')}
+            })
+            .catch(console.warn);
     };
 
     checkFormInputs = () => Object.values(this.state).some(i =>!i);

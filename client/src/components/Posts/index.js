@@ -15,7 +15,7 @@ class Posts extends React.Component{
         fetch('http://localhost:3000/posts')
             .then(r => r.json())
             .then(data => {
-                this.setState({allposts: data.posts})
+                this.setState({allposts: data.posts});
             })
     }
 

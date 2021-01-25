@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Redressed&display=swap');
+
+#list-items {
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#content {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
